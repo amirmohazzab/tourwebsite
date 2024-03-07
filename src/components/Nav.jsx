@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import photo from '../images/photo.jpg'
 
 const Nav = () => {
 
@@ -98,7 +97,7 @@ const Nav = () => {
           </div>
                 
           <a href=''>
-            <img src={photo} alt="avatar" class="w-8 h-8 flex-center rounded-full hover:shadow-lg cursor-pointer costum-transition"/>
+            <img src="images/photo.jpg" class="w-8 h-8 flex-center rounded-full hover:shadow-lg cursor-pointer costum-transition"/>
           </a>
         </div>
       </section>
