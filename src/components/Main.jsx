@@ -5,12 +5,12 @@ import MainSwiper from "./MainSwiper"
 const Main = () => {
 
     return (
-    <main class="pt-4">
+    <main class="pt-4 mb-10">
         
-    <div class="container grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <div class="container grid grid-cols-1 h-70 sm:grid-cols-3 gap-4">
 
-        <div class="relative w-full h-70 pt-md sm:col-span-2 ">
-            <div class="absolute inset-0 w-full bg-cover ">
+        <div class="relative w-full pt-md sm:col-span-2">
+            <div class="absolute inset-0 h-full w-full bg-cover">
                 <MainSwiper />
             </div>
         </div>
