@@ -3,7 +3,7 @@ import VisitedSwiper from './VisitedSwiper'
 
 const Visitedplaces = () => {
   return (
-    <div class="grid grid-cols-1 p-4 lg:grid-cols-4 lg:gap-4 lg:container">
+    <div class="grid grid-cols-1 p-4 mb-10 lg:grid-cols-4 lg:gap-4 lg:container">
       <div class="flex justify-between items-end px-4">
         <div className="flex flex-col gap-1 text-gray-600 font-medium lg:justify-center lg:items-center lg:gap-4 lg:w-full lg:h-full">
           <h3 class="text-base lg:text-2xl "> popular places </h3>

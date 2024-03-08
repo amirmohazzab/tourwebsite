@@ -1,6 +1,7 @@
 import Nav from "./components/Nav";
 import Main from "./components/Main"
 import Visitedplaces from "./components/Visitedplaces";
+import MostVisitedPlaces from "./components/MostVisitedPlaces";
 
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <Nav />
       <Main />
       <Visitedplaces />
+      <MostVisitedPlaces />
     </div>
   );
 }
