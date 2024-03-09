@@ -2,7 +2,7 @@ const MostVisitedPlaces = () => {
     return (
         <div class="flex flex-col gap-4 px-4 pb-10">
             <h2 class="text-lg font-medium text-gray-700 pb-4"> Most Visited Places </h2>
-            <div className="grid grid-cols-1 gap-4 pb-4">
+            <div className="grid grid-cols-1 gap-4 pb-4 sm:grid-cols-3">
                 <div className="flex flex-col rounded-2xl overflow-hidden shadow-2xl">
                     <div className="relative w-full cursor-pointer group pt-md">
                         <div className="absolute inset-0 overflow-hidden">
@@ -26,8 +26,6 @@ const MostVisitedPlaces = () => {
                         </a>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 gap-4 pb-4">
                 <div className="flex flex-col rounded-2xl overflow-hidden shadow-2xl">
                     <div className="relative w-full cursor-pointer group pt-md">
                         <div className="absolute inset-0 overflow-hidden">
@@ -51,8 +49,6 @@ const MostVisitedPlaces = () => {
                         </a>
                     </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-1 gap-4">
                 <div className="flex flex-col rounded-2xl overflow-hidden shadow-2xl">
                     <div className="relative w-full cursor-pointer group pt-md">
                         <div className="absolute inset-0 overflow-hidden">
