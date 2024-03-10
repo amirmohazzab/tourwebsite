@@ -1,12 +1,14 @@
-import { useState } from "react"
+import { useContext, useEffect } from "react"
+import TripModel from "./TripModel"
+import { TourContext } from './../Context';
 
 const TripRequest = () => {
 
-    const [openMenu, setOpenMenu] = useState(false)
-    const [goNext, setGoNext] = useState(false)
+    const {openMenu, goNext, setOpenMenu, setGoNext} = useContext(TourContext);
 
     return (
-        <div class="bg-white flex flex-col rounded-2xl sm:max-w-[34rem] sm:mx-auto">
+        <>
+            <div class="bg-white flex flex-col rounded-2xl sm:max-w-[34rem] md:max-w-2xl lg:max-w-3xl sm:mx-auto">
             <div class="flex-center w-full h-14 text-lg test-gray-700 font-medium border-b border-gray-300">
                 Trip Request
             </div>
@@ -92,7 +94,7 @@ const TripRequest = () => {
                 </div>
             </div>
             <div class="flex py-8 px-4">
-                <button onClick={() => {setOpenMenu(true); setTimeout(()=>{setGoNext(true)}, 2000)}} class="rounded-2xl bg-yellow-500 text-gray-700 w-full sm:w-auto sm:px-6 h-12 flex-center gap-4 text-lg">
+                <button onClick={() => {setOpenMenu(!openMenu); setTimeout(()=>{setGoNext(!goNext)}, 2000)}} class="rounded-2xl bg-yellow-500 text-gray-700 w-full sm:w-auto sm:px-6 h-12 flex-center gap-4 text-lg">
                     <h4 class="text-base font-bold text-gray-700">
                          {
                             openMenu ? "Wait" : "Next Step"
@@ -113,12 +115,15 @@ const TripRequest = () => {
                 </button>
             </div>
             {
-                goNext && 
+                goNext ? 
                 (
-                    <div onClick={() => {setOpenMenu(false); setGoNext(false)}} class="fixed inset-0 bg-gray-900 bg-opacity-50 z-10"></div>
-                )
+                    <div onClick={() => {setOpenMenu(!openMenu); setGoNext(!goNext)}} class="fixed inset-0 bg-gray-900 bg-opacity-50 z-10"></div>
+                ) : ""
             }
-        </div>
+            </div>
+            <TripModel />
+        </>
+       
     )
 }
 

@@ -5,6 +5,7 @@ import MostVisitedPlaces from "./components/MostVisitedPlaces";
 import TripRequest from "./components/TripRequest";
 
 
+
 const App = () => {
   return (
     <div class="bg-[#f2f2f2]">

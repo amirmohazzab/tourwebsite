@@ -9,7 +9,7 @@ module.exports = {
     },
     extend: {
       padding:{
-        'md': '56%'
+        'md': '56.25%'
       }
     },
   },

@@ -16,15 +16,15 @@ const MainSwiper = () => {
                 clickable:true
             }}
         >
-            <div className='swiper-button-next swiper-button-prev object-cover h-70'>
+            <div className='swiper-button-next swiper-button-prev object-cover '>
                 <SwiperSlide> 
                     <a href="#">
-                        <img src="images/slide1.jpg" class="w-full h-full rounded-2xl"/>
+                        <img src="images/slide1.jpg" class="w-full h-full rounded-2xl" />
                     </a>
                 </SwiperSlide>
                 <SwiperSlide> 
                     <a href="#">
-                        <img src="images/slide2.jpg" class="w-full h-full rounded-2xl"/>
+                        <img src="images/slide2.jpg" class="w-full h-full rounded-2xl" />
                     </a>
                 </SwiperSlide>
                 <SwiperSlide> 
