@@ -102,8 +102,9 @@ const TripModel = () => {
                                         </li>
                                     </ul>
                                 </li>
-                                <div class="px-4 py-2">
-                                    <button onClick={() => {toast.success("Your info is saved"); setGoNext(!goNext); setOpenMenu(!openMenu) }} class="flex-center bg-red-500 text-white rounded-2xl w-full h-10"> Apply </button>
+                                <div class="flex items-center justify-between px-10 py-2">
+                                    <button onClick={() => {toast.success("Your info is saved"); setGoNext(!goNext); setOpenMenu(!openMenu) }} class="flex-center bg-green-500 text-white rounded-2xl w-1/3 h-10"> Apply </button>
+                                    <button onClick={() => {setGoNext(!goNext); setOpenMenu(!openMenu) }} class="flex-center bg-red-500 text-white rounded-2xl w-1/3 h-10"> Cancel </button>
                                 </div>
                             </ul>
                         </div>

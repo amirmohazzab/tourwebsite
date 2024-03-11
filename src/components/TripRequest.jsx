@@ -8,7 +8,7 @@ const TripRequest = () => {
 
     return (
         <>
-            <div class="bg-white flex flex-col rounded-2xl sm:max-w-[34rem] md:max-w-2xl lg:max-w-3xl sm:mx-auto">
+            <div class="bg-white flex flex-col rounded-2xl sm:max-w-[34rem] md:max-w-2xl lg:max-w-3xl xl:max-w-4xl sm:mx-auto">
             <div class="flex-center w-full h-14 text-lg test-gray-700 font-medium border-b border-gray-300">
                 Trip Request
             </div>

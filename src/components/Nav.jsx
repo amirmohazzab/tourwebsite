@@ -1,18 +1,40 @@
-import React, {useState} from 'react'
+import React, {useContext, useState} from 'react'
+import { TourContext } from '../Context';
 
 const Nav = () => {
 
   const [openin, setOpenIn] = useState(false);
   const [openout, setOpenOut] = useState(false);
+  const [openMountain, setOpenMountain] = useState(false)
+
+  const handleOpenIn = () => {
+      setOpenIn(!openin);
+      if (openMountain === true) setOpenMountain(!openMountain);
+      if (openout === true) setOpenOut(!openout);
+  }
+
+  const handleOpenMountain = () => {
+    setOpenMountain(!openMountain);
+    if (openout === true ) setOpenOut(!openout);
+  }
+
+  const handleOpenOut = () => {
+    setOpenOut(!openout);
+    if (openin === true) setOpenIn(!openin);
+    if (openMountain === true) setOpenMountain(!openMountain);
+  }
+
+  
+  const {openHamburger, setOpenHamburger} = useContext(TourContext);
 
   return (
-    <nav class="h-14 w-full bg-white border-b border-style shadow-lg">
+    <>
+      <nav class="h-14 w-full bg-white border-b border-style shadow-lg">
       <section class="container h-full flex justify-between items-center">
         <div>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 sm:hidden">
+            <svg onClick={() => setOpenHamburger(!openHamburger)} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 cursor-pointer sm:hidden">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg> 
-        
         <ul class="hidden list-none sm:flex items-center gap-4">
           <li>
               <a href="" class="text-sm font-medium text-gray-700"> Home</a>
@@ -20,7 +42,7 @@ const Nav = () => {
 
           <li class="relative">
             <div class="flex items-center gap-2 cursor-pointer">
-              <span class="text-sm font-medium text-gray-700" onClick={() => setOpenIn(!openin)}> inside tours </span>
+              <span class="text-sm font-medium text-gray-700" onClick={() => setOpenIn(!openin)}> Inside tours </span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className={`${openin ? 'rotate-180' : ''} w-4 h-4 costum-transition`}>
                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
@@ -61,7 +83,7 @@ const Nav = () => {
 
           <li class="relative">
             <div class="flex items-center gap-2 cursor-pointer">
-              <span class="text-sm font-medium text-gray-700" onClick={() => setOpenOut(!openout)}> outside tours </span>
+              <span class="text-sm font-medium text-gray-700" onClick={() => setOpenOut(!openout)}> Outside tours </span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className={`${openout ? 'rotate-180' : ''} w-4 h-4 costum-transition`}>
                 <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
               </svg>
@@ -87,6 +109,9 @@ const Nav = () => {
           <li>
             <a href="" class="text-sm font-medium text-gray-700"> Magazine </a>
           </li>
+          <li>
+            <a href="" class="text-sm font-medium text-gray-700"> Honors </a>
+          </li>
         </ul>
       </div>
       <div class="flex items-center gap-4">
@@ -101,7 +126,67 @@ const Nav = () => {
           </a>
         </div>
       </section>
-    </nav>
+      </nav>
+
+      {
+        openHamburger ?
+        (
+          <div class="fixed inset-0 bg-gray-900 bg-opacity-60 z-10 backdrop-blur-sm"></div>
+        ) : ""
+      }
+
+      <div class={`fixed inset-y-0 left-0 right-auto transition-all overflow-hidden ${openHamburger ? 'w-64' : 'w-0'} z-20 bg-gray-100`}>
+              <div onClick={() => setOpenHamburger(!openHamburger)} class="flex justify-end cursor-pointer pr-2 pt-2 text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="p-4 flex flex-col text-base font-medium text-gray-700 gap-4">
+                <a href="" class=""> Home </a>
+                <div class="flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-gray-700 cursor-pointer">
+                    <span onClick={handleOpenIn}> Inside Tours </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`${openin ? 'transition-all rotate-90' : ''} w-4 h-4`}>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </div>
+                  <div class={`${openin ? 'flex' : 'hidden'} transition-all pl-4 flex-col gap-4`}>
+                      <a href="#"> Kish Tour </a>
+                      <div class="flex items-center justify-between">
+                        <span onClick={handleOpenMountain} class="cursor-pointer"> Mountain Tours </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`${openMountain ? 'transition-all rotate-90' : ''} w-4 h-4`}>
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                        </svg>
+                      </div>
+                      <div class={`${openMountain ? 'flex' : 'hidden'} transition-all pl-4 flex-col gap-4`}>
+                      <a href="#"> Alp Mountain </a>
+                      <a href="#"> Himalaya Mountain </a>
+                      <a href="#"> Alborz Mountain </a>
+                  </div>
+                      <a href="#"> Gheshm Tour </a>
+                      <a href="#"> Isfahan Tour </a>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                  <div class="flex items-center justify-between text-gray-700 cursor-pointer">
+                    <span onClick={handleOpenOut}> Outside Tours </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`${openout ? 'transition-all rotate-90' : ''} w-4 h-4`}>
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </div>
+                  <div class={`${openout ? 'flex' : 'hidden'} transition-all pl-4 flex-col gap-4`}>
+                      <a href="#"> Austria Tour </a>
+                      <a href="#"> Italy Tour </a>
+                      <a href="#"> Switzerland Tour </a>
+                      <a href="#"> Germany Tour </a>
+                  </div>
+                </div>
+                <a href="" class=""> Magazine </a>
+                <a href="" class=""> Honors </a>
+              </div>
+      </div>
+    </>
+    
   )
 }
 

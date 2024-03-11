@@ -26,8 +26,23 @@
   .swiper-button-prev::after {
     @apply text-xs text-gray-700;
   }
+  .scroll-fixed {
+    @apply h-full overflow-hidden;
+  }
 }
 @tailwind utilities;
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+}
 
 body {
   margin: 0;
