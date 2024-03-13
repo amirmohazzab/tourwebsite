@@ -9,19 +9,19 @@ const MostVisitedPlaces = () => {
                             <img src="images/slide1.jpg" alt="slide1" class="w-full h-full group-hover:scale-125 transition-all duration-150 ease-in" />
                         </div>
                         <div class="absolute inset-0 flex-center bg-gray-900 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-in">
-                            <a href="" class="flex px-4 py-2 rounded-2xl bg-purple-700 text-white text-base font-medium">
+                            <a href="" class="flex px-4 py-2 rounded-2xl bg-purple-700 text-white text-base font-medium dark:bg-indigo-400">
                                 Continue...
                             </a>
                         </div>
                     </div>
                     <div class="flex flex-col p-4">
-                        <h3 class="text-gray-700 text-base font-medium mb-4 line-clamp-1"> Amazon Forest </h3>
+                        <h3 class="title_color text-base font-medium mb-4 line-clamp-1"> Amazon Forest </h3>
                         <div class="flex h-12 mb-8">
-                            <h2 class="text-gray-700 text-base font-normal line-clamp-2">
+                            <h2 class="title_color text-base font-normal line-clamp-2 ">
                                 This picture belongs to Amazon Forest which is out of the seven Wonders and located in north of the South America.
                             </h2>
                         </div>
-                        <a href="#" class="flex text-purple-700 font-medium text-lg">
+                        <a href="#" class="flex text-purple-700 font-medium text-lg dark:text-indigo-400">
                             Continue...
                         </a>
                     </div>
@@ -32,19 +32,19 @@ const MostVisitedPlaces = () => {
                             <img src="images/slide2.jpg" alt="slide1" class="w-full h-full group-hover:scale-125 transition-all duration-150 ease-in" />
                         </div>
                         <div class="absolute inset-0 flex-center bg-gray-900 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-in">
-                            <a href="" class="flex px-4 py-2 rounded-2xl bg-purple-700 text-white text-base font-medium">
+                            <a href="" class="flex px-4 py-2 rounded-2xl bg-purple-700 text-white text-base font-medium dark:bg-indigo-400">
                                 Continue...
                             </a>
                         </div>
                     </div>
                     <div class="flex flex-col p-4">
-                        <h3 class="text-gray-700 text-base font-medium mb-4 line-clamp-1"> Amazon Forest </h3>
+                        <h3 class="title_color text-base font-medium mb-4 line-clamp-1"> Amazon Forest </h3>
                         <div class="flex h-12 mb-8">
-                            <h2 class="text-gray-700 text-base font-normal line-clamp-2">
+                            <h2 class="title_color text-base font-normal line-clamp-2">
                                 This picture belongs to Amazon Forest which is out of the seven Wonders and located in north of the South America.
                             </h2>
                         </div>
-                        <a href="#" class="flex text-purple-700 font-medium text-lg">
+                        <a href="#" class="flex text-purple-700 font-medium text-lg dark:text-indigo-400">
                             Continue...
                         </a>
                     </div>
@@ -55,19 +55,19 @@ const MostVisitedPlaces = () => {
                             <img src="images/slide3.jpg" alt="slide1" class="w-full h-full group-hover:scale-125 transition-all duration-150 ease-in" />
                         </div>
                         <div class="absolute inset-0 flex-center bg-gray-900 bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-150 ease-in">
-                            <a href="" class="flex px-4 py-2 rounded-2xl bg-purple-700 text-white text-base font-medium">
+                            <a href="" class="flex px-4 py-2 rounded-2xl bg-purple-700 text-white text-base font-medium dark:bg-indigo-400">
                                 Continue...
                             </a>
                         </div>
                     </div>
                     <div class="flex flex-col p-4">
-                        <h3 class="text-gray-700 text-base font-medium mb-4 line-clamp-1"> Amazon Forest </h3>
+                        <h3 class="title_color text-base font-medium mb-4 line-clamp-1"> Amazon Forest </h3>
                         <div class="flex h-12 mb-8">
-                            <h2 class="text-gray-700 text-base font-normal line-clamp-2">
+                            <h2 class="title_color text-base font-normal line-clamp-2">
                                 This picture belongs to Amazon Forest which is out of the seven Wonders and located in north of the South America.
                             </h2>
                         </div>
-                        <a href="#" class="flex text-purple-700 font-medium text-lg">
+                        <a href="#" class="flex text-purple-700 font-medium text-lg dark:text-indigo-400">
                             Continue...
                         </a>
                     </div>

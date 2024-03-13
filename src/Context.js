@@ -9,7 +9,11 @@ export const TourContextProvider = ({children}) => {
     const [openMenu, setOpenMenu] = useState(false);
     const [openHamburger, setOpenHamburger] = useState(false);
 
-    // const handleHamburgerMenu = () => setOpenHamburger(!openHamburger)
+    const [theme, setTheme] = useState("light");
+
+    const handleThemeSwitch = () => {
+        setTheme(prevtheme => prevtheme === "dark" ? "light" : "dark")
+    }
 
 
     return (
@@ -19,7 +23,9 @@ export const TourContextProvider = ({children}) => {
              setGoNext, 
              setOpenMenu, 
              openHamburger, 
-             setOpenHamburger 
+             setOpenHamburger,
+             theme,
+             handleThemeSwitch
         }}>
             {children}
         </TourContext.Provider>
