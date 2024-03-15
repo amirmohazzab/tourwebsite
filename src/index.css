@@ -29,18 +29,36 @@
   .scroll_fixed {
     @apply h-full overflow-hidden;
   }
-  /* .handle_darkmode .moon {
-    @apply block;
+  .swiper {
+    @apply w-full h-full;
   }
-  .handle_darkmode .sun {
-    @apply hidden;
+  .mySwiper2 img{
+    @apply rounded-t-xl overflow-hidden cursor-pointer
   }
-  .handle_darkmode.darkmode .moon {
-    @apply hidden !important;
+  .mySwiper2 {
+    @apply h-4/5 w-full aspect-video
   }
-  .handle_darkmode.darkmode .sun {
-    @apply block !important;
-  } */
+  .mySwiper {
+    @apply h-1/5 w-full box-border 
+  }
+  .mySwiper .swiper-slide {
+    @apply w-1/4 h-full opacity-60
+  }
+  .mySwiper .swiper-slide-thumb-active {
+    opacity: 100;
+  }
+  .mySwiper .swiper-slide-thumb-active {
+    @apply opacity-100
+  }
+  .swiper-button-prev .swiper-button-next {
+    @apply text-gray-700 font-medium
+  }
+  .swiper-button-prev:after .swiper-button-next:after {
+    @apply hidden md:text-xs text-gray-700
+  }
+  .mySwiper img {
+    @apply py-1 sm:py-2 lg:py-4 rounded-b-xl overflow-hidden 
+  }
 }
 @tailwind utilities;
 

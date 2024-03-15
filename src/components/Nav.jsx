@@ -8,7 +8,6 @@ const Nav = () => {
   const [openMountain, setOpenMountain] = useState(false)
   const {openHamburger, setOpenHamburger, handleThemeSwitch, theme} = useContext(TourContext);
 
-  console.log(theme)
 
   const handleOpenIn = () => {
       setOpenIn(!openin);
@@ -154,47 +153,47 @@ const Nav = () => {
                 </svg>
               </div>
               <div class="p-4 flex flex-col text-base font-medium text-gray-700 gap-4">
-                <a href="" class="title_color"> Home </a>
+                <a href="" class="title_color dark:hover:text-indigo-400"> Home </a>
                 <div class="flex flex-col gap-4">
                   <div class="flex items-center justify-between text-gray-700 cursor-pointer">
-                    <span onClick={handleOpenIn} class="title_color"> Inside Tours </span>
+                    <span onClick={handleOpenIn} class="title_color dark:hover:text-indigo-400"> Inside Tours </span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`${openin ? 'transition-all rotate-90' : ''} w-4 h-4 title_color`}>
                       <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                     </svg>
                   </div>
                   <div class={`${openin ? 'flex' : 'hidden'} transition-all pl-4 flex-col gap-4`}>
-                      <a href="#" class="title_color"> Kish Tour </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Kish Tour </a>
                       <div class="flex items-center justify-between">
-                        <span onClick={handleOpenMountain} class="cursor-pointer title_color"> Mountain Tours </span>
+                        <span onClick={handleOpenMountain} class="cursor-pointer title_color dark:hover:text-indigo-400"> Mountain Tours </span>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`${openMountain ? 'transition-all rotate-90' : ''} w-4 h-4 title_color`}>
                           <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                         </svg>
                       </div>
                       <div class={`${openMountain ? 'flex' : 'hidden'} transition-all pl-4 flex-col gap-4`}>
-                      <a href="#" class="title_color"> Alp Mountain </a>
-                      <a href="#" class="title_color"> Himalaya Mountain </a>
-                      <a href="#" class="title_color"> Alborz Mountain </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Alp Mountain </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Himalaya Mountain </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Alborz Mountain </a>
                   </div>
-                      <a href="#" class="title_color"> Gheshm Tour </a>
-                      <a href="#" class="title_color"> Isfahan Tour </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Gheshm Tour </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Isfahan Tour </a>
                   </div>
                 </div>
                 <div class="flex flex-col gap-4">
                   <div class="flex items-center justify-between text-gray-700 cursor-pointer">
-                    <span onClick={handleOpenOut} class="title_color"> Outside Tours </span>
+                    <span onClick={handleOpenOut} class="title_color dark:hover:text-indigo-400"> Outside Tours </span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class={`${openout ? 'transition-all rotate-90' : ''} w-4 h-4 title_color`}>
                       <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                     </svg>
                   </div>
                   <div class={`${openout ? 'flex' : 'hidden'} transition-all pl-4 flex-col gap-4`}>
-                      <a href="#" class="title_color"> Austria Tour </a>
-                      <a href="#" class="title_color"> Italy Tour </a>
-                      <a href="#" class="title_color"> Switzerland Tour </a>
-                      <a href="#" class="title_color"> Germany Tour </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Austria Tour </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Italy Tour </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Switzerland Tour </a>
+                      <a href="#" class="title_color dark:hover:text-indigo-400"> Germany Tour </a>
                   </div>
                 </div>
-                <a href="" class="title_color"> Magazine </a>
-                <a href="" class="title_color"> Honors </a>
+                <a href="" class="title_color dark:hover:text-indigo-400"> Magazine </a>
+                <a href="" class="title_color dark:hover:text-indigo-400"> Honors </a>
               </div>
       </div>
     </>

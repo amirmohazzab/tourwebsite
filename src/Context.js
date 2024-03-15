@@ -9,10 +9,15 @@ export const TourContextProvider = ({children}) => {
     const [openMenu, setOpenMenu] = useState(false);
     const [openHamburger, setOpenHamburger] = useState(false);
 
-    const [theme, setTheme] = useState("light");
+    const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'system');
 
     const handleThemeSwitch = () => {
-        setTheme(prevtheme => prevtheme === "dark" ? "light" : "dark")
+        setTheme(prevtheme => prevtheme === "light" ? "dark" : "light")
+        if (theme === 'dark') {
+            localStorage.setItem('theme', 'dark')
+        } else {
+            localStorage.setItem('theme', 'light')
+        }
     }
 
 

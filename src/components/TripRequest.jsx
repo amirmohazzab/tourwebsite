@@ -9,7 +9,7 @@ const TripRequest = () => {
     return (
         <>
             <div class="bg-white dark:bg-dark-700 flex flex-col rounded-2xl sm:max-w-[34rem] md:max-w-2xl lg:max-w-3xl xl:max-w-4xl sm:mx-auto">
-            <div class="flex-center w-full h-14 text-lg test-gray-700 font-medium border-b border-gray-300">
+            <div class="flex-center w-full h-14 text-lg title_color font-medium border-b border-gray-300">
                 Trip Request
             </div>
             <div> 
@@ -17,7 +17,7 @@ const TripRequest = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 border-b-2 border-dashed text-gray-300">
                         <div class="sm:py-6 sm:px-0">
                             <div class="py-6 border-b sm:pr-4 border-gray-300 sm:border-b-0 sm:border-r sm:py-0">
-                                <h4 class="text-sm font-bold text-gray-700 mb-4"> Person Number </h4>
+                                <h4 class="text-sm font-bold title_color mb-4"> Person Number </h4>
                                 <div class="flex gap-4 w-full">
                                     <div className="flex-1 relative">
                                         <input type="radio" name="users" class="absolute hidden peer top-0 right-0 invisible" id="one" />

@@ -10,7 +10,9 @@ module.exports = {
     },
     extend: {
       padding:{
-        'md': '56.25%'
+        'md': '56.25%',
+        '1/3': '33.33333%',
+        '2/3': '66.66667'
       },
       colors: {
         dark: {
@@ -31,7 +33,7 @@ module.exports = {
     },
   },
   plugins: [
-    require('@tailwindcss/forms'),
+    require('@tailwindcss/forms')
   ],
 }
 

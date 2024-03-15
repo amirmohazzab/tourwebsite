@@ -1,6 +1,6 @@
 const FlexTable = () => {
     return (
-        <div class="p-4 mb-10">
+        <div class="p-4">
             <div class="hidden lg:grid grid-cols-12 gap-4 p-4 text-xs font-medium title_color">
                 <div class="col-span-3"> AirLine </div>
                 <div class="col-span-2 text-center"> Destination </div>
@@ -51,7 +51,7 @@ const FlexTable = () => {
                             <div class="absolute w-4 h-4 animate-pulse right-0 top-8 rounded-full border-2 border-white bg-red-500 dark:border-zinc-600"></div>
                         </div>
                         <div class="flex flex-col items-center lg:items-start">
-                            <h3 class="text-sm font-medium title_color mb-1"> Ryanair </h3>
+                            <h3 class="text-sm font-medium title_color mb-1"> easyJet </h3>
                             <h4 class="text-xs font-medium title_color"> All day </h4>
                         </div>
                     </div>
@@ -85,7 +85,7 @@ const FlexTable = () => {
                             <div class="absolute w-4 h-4 animate-pulse right-0 top-8 rounded-full border-2 border-white bg-green-500 dark:border-zinc-600"></div>
                         </div>
                         <div class="flex flex-col items-center lg:items-start">
-                            <h3 class="text-sm font-medium title_color mb-1"> Ryanair </h3>
+                            <h3 class="text-sm font-medium title_color mb-1"> Eurowings </h3>
                             <h4 class="text-xs font-medium title_color"> All day </h4>
                         </div>
                     </div>
